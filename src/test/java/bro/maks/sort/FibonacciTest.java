@@ -3,37 +3,9 @@ package bro.maks.sort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class RecursionTest {
+public class FibonacciTest {
     @Test
-    void factorialDefaultTest() {
-        RecursionFactorial fac = new RecursionFactorial();
-        int factorial = fac.factorial(7);
-        Assertions.assertEquals(5040, factorial);
-    }
-
-    @Test
-    void factorialNullTest() {
-        RecursionFactorial fac = new RecursionFactorial();
-        int factorial = fac.factorial(0);
-        Assertions.assertEquals(1, factorial);
-    }
-
-    @Test
-    void factorialOneTest() {
-        RecursionFactorial fac = new RecursionFactorial();
-        int factorial = fac.factorial(1);
-        Assertions.assertEquals(1, factorial);
-    }
-
-    @Test
-    void factorialLessTest() {
-        RecursionFactorial fac = new RecursionFactorial();
-        int factorial = fac.factorial(-5);
-        Assertions.assertEquals(-1, factorial);
-    }
-
-    @Test
-    void recursionFibonachiDefaultTest() {
+    void recursionFibonachiTypicalTest() {
         RecursionFibonachi fib = new RecursionFibonachi();
         Assertions.assertEquals(1, fib.fibonachi(2));
         Assertions.assertEquals(2, fib.fibonachi(3));
@@ -100,4 +72,5 @@ public class RecursionTest {
         Assertions.assertEquals(-1, fib.fibonachi(-1));
         Assertions.assertEquals(-1, fib.fibonachi(-5));
     }
+
 }

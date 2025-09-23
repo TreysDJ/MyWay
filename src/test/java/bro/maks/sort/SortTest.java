@@ -1,16 +1,19 @@
 package bro.maks.sort;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import java.util.Arrays;
 
 public class SortTest {
-    public void testSortAlgorithm(Sort sorter, int[] arrActual, int[] arrExpected) {
+    private void testSortAlgorithm(Sort sorter, int[] arrActual, int[] arrExpected) {
         int[] arrActualCopy = Arrays.copyOf(arrActual, arrActual.length);
         sorter.sort(arrActualCopy);
+        Assertions.assertArrayEquals(arrExpected, arrActualCopy,
+                "Sorting with " + sorter.getClass().getSimpleName() + " failed for input: " + Arrays.toString(arrActual));
     }
 
     @Test
-    void testDefaultCase() {
+    void testBaseTypicalCase() {
         int[] arrOriginal = {5, 7, 3, 8, 1, 5};
         int[] arrExpected = {1, 3, 5, 5, 7, 8};
 
