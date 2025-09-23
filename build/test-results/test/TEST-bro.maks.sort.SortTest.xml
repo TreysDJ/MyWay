@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="bro.maks.sort.SortTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-09-23T17:02:45.768Z" hostname="BLINKY-PC" time="0.021">
+  <properties/>
+  <testcase name="testEmptyArray()" classname="bro.maks.sort.SortTest" time="0.014"/>
+  <testcase name="testDefaultCase()" classname="bro.maks.sort.SortTest" time="0.001"/>
+  <testcase name="testArrayWithEqualElements()" classname="bro.maks.sort.SortTest" time="0.001"/>
+  <testcase name="testReverseSortedArray()" classname="bro.maks.sort.SortTest" time="0.001"/>
+  <testcase name="testAlreadySortedArray()" classname="bro.maks.sort.SortTest" time="0.001"/>
+  <testcase name="testSingleElementArray()" classname="bro.maks.sort.SortTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
