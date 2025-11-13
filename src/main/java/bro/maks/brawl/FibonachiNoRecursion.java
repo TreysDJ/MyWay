@@ -1,6 +1,4 @@
-package bro.maks.sort;
-
-import java.util.Scanner;
+package bro.maks.brawl;
 
 public class FibonachiNoRecursion {
     public int fibonachi(int n) {

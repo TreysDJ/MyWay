@@ -10,6 +10,10 @@ public class HeapSort {
         for (int i = 0; i < length; i++) {
             arr[i] = scanner.nextInt();
         }
+
+        printArray(arr);
+        HeapSort sorter = new HeapSort();
+        sorter.sort(arr);
         printArray(arr);
     }
 

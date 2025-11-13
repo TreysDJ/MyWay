@@ -1,6 +1,7 @@
 package bro.maks.map;
 
-import bro.maks.brawl.HashMap;
+
+import bro.maks.JavaAlgorithmsCourse.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,7 @@ public class HashMapTest {
 
     @Test
     void testPut() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         Integer expeted = 5;
         values.put("Obezyana", expeted);
         Integer actual = values.get("Obezyana");
@@ -17,13 +18,13 @@ public class HashMapTest {
 
     @Test
     void shouldReturnNullWhenNoKey() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         Assertions.assertNull(values.get("Bjerfjldlkrj"));
     }
 
     @Test
     void shouldRemoveValue() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 4);
         values.put("Bs", 3);
         Assertions.assertEquals(4, values.remove("Bj"));
@@ -31,7 +32,7 @@ public class HashMapTest {
 
     @Test
     void testSize() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Obj", 4);
         values.put("Zie", 3);
         Assertions.assertEquals(2, values.size());
@@ -50,7 +51,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnTrueWhenKeyExists() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 5);
         values.put("Bs", 4);
         Assertions.assertTrue(values.containsKey("Bj"));
@@ -58,7 +59,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnFalseWhenKeyDoesNotExist() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 5);
         values.put("Bs", 4);
         Assertions.assertFalse(values.containsKey("Lox"));
@@ -66,7 +67,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnTrueWhenValueExists() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 5);
         values.put("Bs", 4);
         Assertions.assertTrue(values.containsValue(5));
@@ -74,7 +75,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnFalseWhenValueDoesNotExist() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 5);
         values.put("Bs", 4);
         Assertions.assertFalse(values.containsValue(555));
@@ -82,13 +83,13 @@ public class HashMapTest {
 
     @Test
     void shouldReturnTrueWhenValuesIsEmptyNoInput() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         Assertions.assertTrue(values.isEmpty());
     }
 
     @Test
     void shouldReturnTrueWhenValuesIsEmptyWithInput() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 4);
         values.remove("Bj");
         Assertions.assertTrue(values.isEmpty());
@@ -96,7 +97,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnFalseWhenValuesIsEmptyWithInput() {
-        HashMap<Integer> values = new HashMap<Integer>(64);
+        Map.HashMap<Integer> values = new Map.HashMap<Integer>(64);
         values.put("Bj", 4);
         Assertions.assertFalse(values.isEmpty());
     }
@@ -128,7 +129,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnTrueWhenEqualsReturnTrue() {
-        HashMap<Person> values = new HashMap<>(64);
+        Map.HashMap<Person> values = new Map.HashMap<>(64);
         Person maks = new Person(5, "Кто в классику играл в цирке не смеётся");
         Person maksDuplicate = new Person(5, "Перо в заднице не значит что ты павлин");
         values.put("Bjj", maks);
@@ -138,7 +139,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnFalseWhenEqualsReturnFalse() {
-        HashMap<Person> values = new HashMap<>(64);
+        Map.HashMap<Person> values = new Map.HashMap<>(64);
         Person maks = new Person(5, "Кто в классику играл в цирке не смеётся");
         Person dima = new Person(7, "Перо в заднице не значит что ты павлин");
         Assertions.assertFalse(maks.equals(dima));
@@ -183,7 +184,7 @@ public class HashMapTest {
 
     @Test
     void shouldReturnValueWnenCollisiton() {
-        HashMap<dayOfBirthDay> values = new HashMap<>(64);
+        Map.HashMap<dayOfBirthDay> values = new Map.HashMap<>(64);
         dayOfBirthDay max = new dayOfBirthDay("Max", 16);
         dayOfBirthDay dima = new dayOfBirthDay("Xam", 12);
         values.put("max", max);

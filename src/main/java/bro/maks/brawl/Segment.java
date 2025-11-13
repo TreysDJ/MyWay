@@ -1,9 +1,9 @@
-package bro.maks.sort;
+package bro.maks.brawl;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class QuickSortD {
+public class Segment {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int amountSelect = scanner.nextInt();

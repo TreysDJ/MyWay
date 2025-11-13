@@ -1,4 +1,4 @@
-package bro.maks.sort;
+package bro.maks.brawl;
 
 import java.util.Scanner;
 

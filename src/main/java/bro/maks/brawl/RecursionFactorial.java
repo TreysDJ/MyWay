@@ -1,4 +1,4 @@
-package bro.maks.sort;
+package bro.maks.brawl;
 
 public class RecursionFactorial {
     public int factorial(int n) {

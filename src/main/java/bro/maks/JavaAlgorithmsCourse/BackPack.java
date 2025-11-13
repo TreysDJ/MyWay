@@ -9,26 +9,29 @@ public class BackPack {
         int n = scanner.nextInt();
 
         int[] weights = new int[n];
-        int[][] backpack = new int[n + 1][w + 1];
-
         for (int i = 0; i < n; i++) {
             weights[i] = scanner.nextInt();
         }
-        for (int a = 0; a <= n; a++) {
-            backpack[a][0] = 0;
-        }
-        for (int b = 0; b <= w; b++) {
-            backpack[0][b] = 0;
-        }
+
+        int result = take(w, weights);
+        System.out.println(result);
+    }
+
+    public static int take(int capacity, int[] weights) {
+        int n = weights.length;
+        int[][] dp = new int[n + 1][capacity + 1];
+
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= w; j++) {
-                if (j >= weights[i- 1]) {
-                    backpack[i][j] = Math.max(backpack[i - 1][j], weights[i - 1] + backpack[i - 1][j - weights[i - 1]]);
+            for (int j = 1; j <= capacity; j++) {
+                if (j >= weights[i - 1]) {
+                    int dontTake = dp[i - 1][j];
+                    int take = weights[i - 1] + dp[i - 1][j - weights[i - 1]];
+                    dp[i][j] = Math.max(dontTake, take);
                 } else {
-                    backpack[i][j] = backpack[i - 1][j];
+                    dp[i][j] = dp[i - 1][j];
                 }
             }
         }
-        System.out.println(backpack[n][w]);
+        return dp[n][capacity];
     }
 }

@@ -1,7 +1,6 @@
 package bro.maks.sort;
 
-public class FastSort {
-
+public class QuickSort {
     public static void main(String[] args) {
 
     }

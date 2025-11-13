@@ -2,11 +2,11 @@ package bro.maks.JavaAlgorithmsCourse;
 
 import java.util.*;
 
-public class priorityQueue {
+public class PriorityQueue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numCommands = Integer.parseInt(scanner.nextLine());
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        java.util.PriorityQueue<Integer> maxHeap = new java.util.PriorityQueue<>(Collections.reverseOrder());
         for (int i = 0; i < numCommands; i++) {
             String command = scanner.nextLine();
             String[] parts = command.split(" ");
