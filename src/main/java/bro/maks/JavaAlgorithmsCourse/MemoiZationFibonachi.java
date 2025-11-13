@@ -1,4 +1,4 @@
-package bro.maks.sort;
+package bro.maks.JavaAlgorithmsCourse;
 import java.util.HashMap;
 
 public class MemoiZationFibonachi {

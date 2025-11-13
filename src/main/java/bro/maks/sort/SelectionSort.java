@@ -1,6 +1,6 @@
 package bro.maks.sort;
 
-public class SelectionSort implements Sort {
+class SelectionSort implements Sort {
     @Override
     public void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
